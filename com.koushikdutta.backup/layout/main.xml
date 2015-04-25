@@ -1,4 +1,5 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:backup="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical" >
@@ -10,11 +11,18 @@
         android:orientation="vertical" >
     </LinearLayout>
 
+    <com.astuetz.PagerSlidingTabStrip
+            backup:pstsTabPaddingLeftRight="0dp"
+            backup:pstsIndicatorColor="@color/action_bar_blue"
+            backup:pstsShouldExpand="true"
+            android:id="@+id/tabs"
+            android:layout_width="match_parent"
+            android:layout_height="48dp" />
+
     <android.support.v4.view.ViewPager
-        xmlns:tools="http://schemas.android.com/tools"
         android:id="@+id/pager"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="0dp"
         android:layout_weight="1" />
 
 </LinearLayout>
